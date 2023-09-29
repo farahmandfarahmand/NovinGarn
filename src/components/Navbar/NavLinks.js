@@ -13,7 +13,7 @@ const NavLinks = () => {
             </HashLink>
            
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-blue-900" to="/contact">
-                تماس با ما
+                فرصت های شغلی
             </HashLink>
             <HashLink className="px-4 font-extrabold text-gray-500 hover:text-blue-900"  smooth to="/get-demo">
                 Demo our products

@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { get } from '../Services/Http'
+import CardFooter from '../components/Card/CardFooter'
+
 
 const Footer = () => {
+
+    const [posts, setPosts] = useState([])
+    useEffect(() => {
+        get('/scopeactivity')
+            .then(({ data }) => console.log(setPosts(data)))
+    }, [])
+
+    const postsActivity = posts.map(post => {
+        return <CardFooter data={
+            {
+                name: post.name,
+               
+             
+
+            }
+        } />
+    })
     return (
         <>
             <footer>
-                <div className="footer max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-30">
+                <div className="footer max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-30" style={{direction:"rtl"}}>
 
                     {/* Top area: Blocks */}
                     <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
@@ -25,22 +45,6 @@ const Footer = () => {
                     </div>
 
                     {/* 2nd block */}
-                    <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
-                        <ul className="text-md">
-                        <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
-                        </li>                            
-                        </ul>
-                    </div>
-
-                    {/* 3rd block */}
                     <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
                         <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
                         <ul className="text-md">
@@ -58,6 +62,23 @@ const Footer = () => {
                         </li>
                         </ul>
                     </div>
+
+                    {/* 3rd block */}
+                    <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
+                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
+                        <ul className="text-md">
+                        <li className="mb-2">
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
+                        </li>
+                        <li className="mb-2">
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
+                        </li>
+                        <li className="mb-2">
+                            <HashLink to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
+                        </li>                            
+                        </ul>
+                    </div>
+                   
 
                     {/* 4th block */}
                     <div className="col-span-12 text-center mx-auto lg:col-span-3 font-bold uppercase text-blue-900">
@@ -98,8 +119,8 @@ const Footer = () => {
                         to="#"
                         className=" hover:text-gray-900"
                     >
-                        Molad e Konsult
-                    </HashLink>. All rights reserved.
+                      تمامی حقوق این سایت متعلق به شرکت فن آوری نوین قرن می باشد
+                    </HashLink>
                     </div>
                 </div>
                 </div>

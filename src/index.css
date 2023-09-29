@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family:'BZar';
+ 
 }
 
 .hero {
@@ -23,4 +23,61 @@ body {
   background: linear-gradient(rgba(2,2,2,.7),rgba(0,0,0,.7)),url(https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) fixed center center;
 }
 
+
+
+.flex-container
+{
+  min-height: auto;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+ 
+  
+  align-items: center;
+  /* align-items: baseline; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  
+  align-content: space-around;
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+}
+
+.flex-item
+{
+  width: auto;
+  margin: 10px 0;
+}
+
+/* خطوط پایین نقش زیبا سازی دارند مهم نیستن */
+
+
+
+/*.flex-container
+{
+
+}*/
+
+.flex-item
+{
+ 
+  text-align: right;
+  line-height: 0.5;
+  color: #fff;
+ 
+  font-size: 2em;
+}
+
+/*.flex-item:nth-child(odd)
+{
+
+}*/
 
