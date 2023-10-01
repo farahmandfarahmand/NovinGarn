@@ -5,6 +5,8 @@ import { get } from '../Services/Http'
 import Card from '../components/Card/Card'
 import CardGoles from '../components/Card/CardGoles'
 
+
+
 const Services = () => {
 
     const [posts, setPosts] = useState([])
@@ -22,6 +24,7 @@ const Services = () => {
 
             }
         } />
+      
     })
 
     const [postgoles, setPostGoles] = useState([])
@@ -55,7 +58,7 @@ const Services = () => {
                 </div>
 
                 <div className="px-12" data-aos="fade-down" data-aos-delay="600">
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-20">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-[500px_minmax(500px,_1fr)_500px]  gap-20">
 
                         {postsActivity}
 

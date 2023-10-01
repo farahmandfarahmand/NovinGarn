@@ -32,7 +32,7 @@ const Portfolio = () => {
                 <div className='w-80 border-b-4 border-blue-950'></div>
                 </div>
                 <div className="px-4" data-aos="fade-down" data-aos-delay="600">
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-9">
 
                         {postEvent}
                     </div>
